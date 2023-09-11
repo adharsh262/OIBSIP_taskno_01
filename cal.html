@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="background1">
+        <h1 class="head">CALCULATOR</h1>
+        <div class="calculator shadow-lg d-flex justify-content-center">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="cal_container_input col-12 shadow-sm">
+                        <input type="text" id="display1" name="display1" class="form-control display1 mt-5">
+                    </div>
+                    <form class="col-12 button-Container mt-3">
+                        <div class="column1 d-flex flex-row justify-content-between shadow-lg mb-3">
+                            <input type="text" class="outputans form-control" name="display2" id="display2">
+                            
+                            <button class="b11 kk11" type="button" value="DEL" id="a1" onclick="display1.value=display1.value.toString().slice(0,-1) ">DEL</button>
+                            <button class="b11 kk11" type="button" value="CLR" id="a2" onclick="display1.value='' ">CLR</button>
+                        </div>
+
+                        <div class="column1 d-flex flex-row justify-content-between shadow-lg mb-3">
+                            <button class="b11 b22 b33" type="button" value="7" id="seven" onclick="display1.value+='7' ">7</button>
+                            <button class="b11 b22 b33" type="button" value="8" id="eight" onclick="display1.value+='8' ">8</button>
+                            <button class="b11 b22 b33" type="button" value="9" id="nine" onclick="display1.value+='9' ">9</button>
+                            <button class="b11 b22" type="button" value="%" id="percent" onclick="display1.value+='%' ">%</button>
+                            <button class="b11 b22" type="button" value="00" id="root" onclick="display1.value+= '00' " >00</button>
+                        </div>
+
+                        <div class="column1 d-flex flex-row justify-content-between shadow-lg mb-3">
+                            <button class="b11 b22 b33" type="button" value="4" id="four" onclick="display1.value+='4' ">4</button>
+                            <button class="b11 b22 b33" type="button" value="5" id="five" onclick="display1.value+='5' ">5</button>
+                            <button class="b11 b22 b33" type="button" value="6" id="six" onclick="display1.value+='6' ">6</button>
+                            <button class="b11 b22" type="button" value="x" id="mul" onclick="display1.value+='*' ">x</button>
+                            <button class="b11 b22" type="button" value="/" id="divison" onclick="display1.value+='/' ">/</button>
+                        </div>
+
+                        <div class="column1 d-flex flex-row justify-content-between shadow-lg mb-3">
+                            <button class="b11 b22 b33" type="button" value="1" id="one" onclick="display1.value+='1' ">1</button>
+                            <button class="b11 b22 b33" type="button" value="2" id="two" onclick="display1.value+='2' ">2</button>
+                            <button class="b11 b22 b33" type="button" value="3" id="three" onclick="display1.value+='3' ">3</button>
+                            <button class="b11 b22" type="button" value="+" id="plus" onclick="display1.value+='+' ">+</button>
+                            <button class="b11 b22" type="button" value="-" id="minus" onclick="display1.value+='-' ">-</button>
+                        </div>
+
+                        <div class="column1 d-flex flex-row justify-content-between shadow-lg mb-3">
+                            <button class="b11 b22" type="button" value="." id="point" onclick="display1.value+='.' ">.</button>
+                            <button class="b11 b22 b33" type="button" value="0" id="zero" onclick="display1.value+='0' ">0</button>
+                            <button class="b11" type="button" value="ANS" id="ans" onclick="display1.value+='ans' ">ANS</button>
+                            <button class="b11 b22 b44" type="button" value="" id="enter" onclick="display2.value=+ eval(display1.value)">ENTER</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script src="cal.js"></script>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
